@@ -18,6 +18,9 @@ func fav(w http.ResponseWriter, r *http.Request){
 func about(w http.ResponseWriter, r *http.Request){
   templ.ExecuteTemplate(w,"about.layout",nil)
  }
+func login(w http.ResponseWriter, r *http.Request){
+	templ.ExecuteTemplate(w,"login.layout",nil)
+ }
 
 func main() {
 	mux := http.NewServeMux()
@@ -26,5 +29,6 @@ func main() {
 	http.HandleFunc("/", index)
 	http.HandleFunc("/fav", fav)
 	http.HandleFunc("/about", about)
+	http.HandleFunc("/login", login)
    	http.ListenAndServe(":8088", nil)
 }
