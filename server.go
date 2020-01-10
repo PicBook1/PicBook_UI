@@ -22,3 +22,13 @@ func about(w http.ResponseWriter, r *http.Request){
 func login(w http.ResponseWriter, r *http.Request){
 	templ.ExecuteTemplate(w,"login.layout",nil)
  }
+func main() {
+	mux := http.NewServeMux()
+	fs := http.FileServer(http.Dir("assets"))
+	mux.Handle("/assets/", http.StripPrefix("/assets/", fs))
+	http.HandleFunc("/", index)
+	http.HandleFunc("/fav", fav)
+	http.HandleFunc("/about", about)
+	http.HandleFunc("/login", login)
+   	http.ListenAndServe(":8088", nil)
+}
