@@ -18,3 +18,7 @@ func fav(w http.ResponseWriter, r *http.Request){
 func about(w http.ResponseWriter, r *http.Request){
   templ.ExecuteTemplate(w,"about.layout",nil)
  }
+
+func login(w http.ResponseWriter, r *http.Request){
+	templ.ExecuteTemplate(w,"login.layout",nil)
+ }
