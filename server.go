@@ -12,3 +12,6 @@ import (
 func index(w http.ResponseWriter, r *http.Request){
 	templ.ExecuteTemplate(w,"index.layout",nil)
 }
+func fav(w http.ResponseWriter, r *http.Request){
+  templ.ExecuteTemplate(w,"fav.layout",nil)
+ }
