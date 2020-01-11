@@ -1,5 +1,0 @@
-{{ template "navbar.html" . }}
-
-{{ template "login.html" . }}
-
-{{ template "footer.html" . }}
