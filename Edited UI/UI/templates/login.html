@@ -1,0 +1,55 @@
+{{ define "login.layout" }}
+
+{{ template "navbar" . }}
+{{ template "login.content" . }}
+{{ template "footer" . }}
+
+{{ end }}
+
+{{ define "login.content" }}
+<body>
+	<h1>Register And Login </h1>
+	<div class="main">
+		<div class="w3">
+			<div class="signin-form profile">
+				<h3>Login</h3>
+				
+				<div class="login-form">
+					<form action="#" method="post">
+						<input type="text" name="email" placeholder="E-mail" required="">
+						<input type="password" name="password" placeholder="Password" required="">
+						<div class="tp">
+							<input type="submit" value="LOGIN NOW">
+						</div>
+					</form>
+				</div>
+				<div class="header-social wthree">
+							<p href="#" class="face"><h5> </h5></p>
+							<p href="#" class="goog"><h5> </h5></p>
+							<div class="clear"></div>
+						</div>
+				<p><a href="#"> Don't have an account?</a></p>
+			</div>
+		</div>
+		<div class="agile">
+			<div class="signin-form profile">
+				<h3>Register</h3>
+				
+				<div class="login-form">
+					<form action="#" method="post">
+						<input type="text" name="email" placeholder="E-mail" required="">
+						<input type="text" name="name" placeholder="Username" required="">
+						<input type="password" name="password" placeholder="Password" required="">
+						<input type="password" name="password" placeholder="Confirm Password" required="">
+						<input type="submit" value="REGISTER">
+					</form>
+				</div>
+				<p><a href="#"> By clicking register, I agree to your terms</a></p>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+					
+</body>
+
+{{ end }}
